@@ -18,6 +18,7 @@ if (process.env.DATABASE_URL) {
 
 const models = {
   User: sequelize.import('./user'),
+  Horse: sequelize.import('./horse'),
   Message: sequelize.import('./message'),
 };
 
