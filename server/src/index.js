@@ -1,3 +1,7 @@
+require('babel-register')({
+  "presets": ["es2015"]
+});
+
 import 'dotenv/config';
 import cors from 'cors';
 import morgan from 'morgan';
