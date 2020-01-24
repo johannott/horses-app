@@ -87,20 +87,24 @@ const horse = (sequelize, DataTypes) => {
     },
     link: {
       type: DataTypes.STRING,
-    },
-    createdAt: {
-      type: DataTypes.STRING,
-    },
-    updatedAt: {
-      type: DataTypes.STRING,
-    },
+    }
   });
 
   Horse.associate = models => {
     Horse.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
 
+  Horse.findByName = async horse_name => {
+    let horse = await Horse.findOne({
+      where: { horse_name },
+    });
 
+    if (!horse) {
+      return 'Error: Could not find horse';
+    }
+
+    return horse;
+  };
 
   return Horse;
 };
