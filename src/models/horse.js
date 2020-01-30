@@ -45,6 +45,13 @@ const horse = (sequelize, DataTypes) => {
         notEmpty: true
       },
     },
+    bred: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      },
+    },
     sire: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -15,6 +15,7 @@ export default gql`
       owner: String!
       age: String!
       gender: String!
+      bred: String!
       sire: String!
       form: String
       races: String
@@ -38,6 +39,7 @@ export default gql`
       owner: String!
       age: String!
       gender: String!
+      bred: String!
       sire: String!
       form: String
       races: String
@@ -62,6 +64,7 @@ export default gql`
     owner: String!
     age: String!
     gender: String!
+    bred: String!
     sire: String!
     form: String
     races: String

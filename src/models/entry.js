@@ -4,6 +4,7 @@ const entry = (sequelize, DataTypes) => {
   const Entry = sequelize.define('entry', {
     race_name: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
       validate: {
         notEmpty: true,
@@ -11,6 +12,7 @@ const entry = (sequelize, DataTypes) => {
     },
     horse_name: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
       validate: {
         notEmpty: true,
