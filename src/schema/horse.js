@@ -3,8 +3,8 @@ import { gql } from 'apollo-server-express';
 export default gql`
   extend type Query {
     horses: [Horse!]
-    horse(id: ID!): Horse
-    horseByName(horse_name: String!): Horse
+    horse(id: ID!): Horse!
+    horseByName(horse_name: String!): Horse!
   }
 
   extend type Mutation {
