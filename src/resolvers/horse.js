@@ -13,6 +13,13 @@ export default {
         }
       });
     },
+    horsesByName: async (parent, { horse_names }, { models }) => {
+      return await models.Horse.findAll({
+        where: {
+          horse_name: horse_names
+        }
+      });
+    }
   },
 
   Mutation: {

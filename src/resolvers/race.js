@@ -7,7 +7,7 @@ export default {
       return await models.Race.findById(id);
     },
     raceByName: async (parent, { race_name }, { models }) => {
-      return await models.Race.findAll({
+      return await models.Race.findOne({
         where: {
           race_name,
         }

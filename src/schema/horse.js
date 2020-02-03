@@ -5,6 +5,7 @@ export default gql`
     horses: [Horse!]
     horse(id: ID!): Horse!
     horseByName(horse_name: String!): Horse!
+    horsesByName(horse_names: [String!]): [Horse!]
   }
 
   extend type Mutation {
