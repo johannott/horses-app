@@ -5,6 +5,10 @@ import horseResolvers from './horse';
 import raceResolvers from './race';
 import entryResolvers from './entry';
 import trendResolvers from './trend';
+import accountResolvers from './account';
+import betResolvers from './bet';
+import trackResolvers from './track';
+import noteResolvers from './note';
 import messageResolvers from './message';
 
 const customScalarResolver = {
@@ -18,5 +22,9 @@ export default [
   raceResolvers,
   entryResolvers,
   trendResolvers,
+  accountResolvers,
+  betResolvers,
+  trackResolvers,
+  noteResolvers,
   messageResolvers,
 ];

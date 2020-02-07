@@ -5,6 +5,10 @@ import horseSchema from './horse';
 import raceSchema from './race';
 import entrySchema from './entry';
 import trendSchema from './trend';
+import accountSchema from './account';
+import betSchema from './bet';
+import trackSchema from './track';
+import noteSchema from './note';
 import messageSchema from './message';
 
 const linkSchema = gql`
@@ -23,4 +27,16 @@ const linkSchema = gql`
   }
 `;
 
-export default [linkSchema, userSchema, horseSchema, raceSchema, entrySchema, trendSchema, messageSchema];
+export default [
+  linkSchema,
+  userSchema,
+  horseSchema,
+  raceSchema,
+  entrySchema,
+  trendSchema,
+  accountSchema,
+  betSchema,
+  trackSchema,
+  noteSchema,
+  messageSchema
+];
