@@ -29,8 +29,12 @@ export default {
         race_name,
         horse_name,
         type,
+        places,
         price,
         amount,
+        toReturn,
+        date,
+        time
       },
       { models },
     ) => {
@@ -38,8 +42,12 @@ export default {
         race_name,
         horse_name,
         type,
+        places,
         price,
-        amount
+        amount,
+        toReturn,
+        date,
+        time
       });
 
       return { race_name, horse_name };
@@ -50,8 +58,12 @@ export default {
         race_name,
         horse_name,
         type,
+        places,
         price,
-        amount
+        amount,
+        toReturn,
+        date,
+        time
       },
       { models },
     ) => {
@@ -60,8 +72,12 @@ export default {
         race_name,
         horse_name,
         type,
+        places,
         price,
-        amount
+        amount,
+        toReturn,
+        date,
+        time
       });
     },
   }

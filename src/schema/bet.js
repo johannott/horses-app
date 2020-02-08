@@ -13,16 +13,24 @@ export default gql`
       race_name: String!
       horse_name: [String!]
       type: String
+      places: String
       price: String
       amount: String
+      toReturn: String
+      date: Date
+      time: String
     ): Bet!
 
     updateBet(
       race_name: String!
       horse_name: [String!]
       type: String
+      places: String
       price: String
       amount: String
+      toReturn: String
+      date: Date
+      time: String
     ): Bet!
   }
 
@@ -31,7 +39,11 @@ export default gql`
     race_name: String!
     horse_name: [String!]
     type: String
+    places: String
     price: String
     amount: String
+    toReturn: String
+    date: Date
+    time: String
   }
 `;

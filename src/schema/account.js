@@ -13,6 +13,7 @@ export default gql`
       username: String!
       password: String
       balance: String
+      url: String
     ): Account!
 
     updateAccount(
@@ -20,6 +21,7 @@ export default gql`
       username: String!
       password: String
       balance: String
+      url: String
     ): Account!
   }
 
@@ -29,5 +31,6 @@ export default gql`
     username: String!
     password: String
     balance: String
+    url: String
   }
 `;

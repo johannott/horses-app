@@ -5,7 +5,6 @@ export default {
     },
     account: async (parent, { id }, { models }) => {
       return await models.Account.findById(id);
-      return await models.Account.findById(id);
     },
     accountByName: async (parent, { account_name }, { models }) => {
       return await models.Account.findOne({
@@ -23,7 +22,8 @@ export default {
         account_name,
         username,
         password,
-        balance
+        balance,
+        url
       },
       { models },
     ) => {
@@ -31,7 +31,8 @@ export default {
         account_name,
         username,
         password,
-        balance
+        balance,
+        url
       });
 
       return { account_name };
@@ -42,7 +43,8 @@ export default {
         account_name,
         username,
         password,
-        balance
+        balance,
+        url
       },
       { models },
     ) => {
@@ -51,7 +53,8 @@ export default {
         account_name,
         username,
         password,
-        balance
+        balance,
+        url
       });
     },
   }

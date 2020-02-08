@@ -24,6 +24,10 @@ const account = (sequelize, DataTypes) => {
     balance: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   });
 

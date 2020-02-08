@@ -20,11 +20,27 @@ const bet = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    places: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     price: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     amount: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    toReturn: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: true,
+    },
+    time: {
       type: DataTypes.STRING,
       allowNull: true,
     }
