@@ -16,8 +16,8 @@ export default gql`
       places: String
       price: String
       amount: String
-      toReturn: String
-      date: Date
+      to_return: String
+      date: String
       time: String
     ): Bet!
 
@@ -28,8 +28,8 @@ export default gql`
       places: String
       price: String
       amount: String
-      toReturn: String
-      date: Date
+      to_return: String
+      date: String
       time: String
     ): Bet!
   }
@@ -42,8 +42,8 @@ export default gql`
     places: String
     price: String
     amount: String
-    toReturn: String
-    date: Date
+    to_return: String
+    date: String
     time: String
   }
 `;

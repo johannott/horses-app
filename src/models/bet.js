@@ -32,12 +32,12 @@ const bet = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    toReturn: {
+    to_return: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: true,
     },
     time: {
