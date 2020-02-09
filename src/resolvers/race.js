@@ -1,7 +1,11 @@
 export default {
   Query: {
     races: async (parent, args, { models }) => {
-      return await models.Race.findAll();
+      return await models.Race.findAll({
+        order: [
+          ['id', 'ASC'],
+        ]
+      });
     },
     race: async (parent, { id }, { models }) => {
       return await models.Race.findById(id);
