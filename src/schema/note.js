@@ -14,6 +14,7 @@ export default gql`
     ): Note!
 
     updateNote(
+      id: ID!
       note_: String
       type: String
     ): Note!
