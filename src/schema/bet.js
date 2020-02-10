@@ -12,25 +12,26 @@ export default gql`
     addBet(
       race_name: String!
       horse_name: [String!]
-      type: String
-      places: String
-      price: String
-      amount: String
-      to_return: String
-      date: String
-      time: String
+      type: String!
+      places: String!
+      price: String!
+      amount: String!
+      to_return: String!
+      date: String!
+      time: String!
     ): Bet!
 
     updateBet(
+      id: ID!
       race_name: String!
       horse_name: [String!]
-      type: String
-      places: String
-      price: String
-      amount: String
-      to_return: String
-      date: String
-      time: String
+      type: String!
+      places: String!
+      price: String!
+      amount: String!
+      to_return: String!
+      date: String!
+      time: String!
     ): Bet!
   }
 
@@ -38,12 +39,12 @@ export default gql`
     id: ID!
     race_name: String!
     horse_name: [String!]
-    type: String
-    places: String
-    price: String
-    amount: String
-    to_return: String
-    date: String
-    time: String
+    type: String!
+    places: String!
+    price: String!
+    amount: String!
+    to_return: String!
+    date: String!
+    time: String!
   }
 `;

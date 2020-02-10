@@ -18,31 +18,52 @@ const bet = (sequelize, DataTypes) => {
     },
     type: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     places: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     price: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     amount: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     to_return: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     date: {
       type: DataTypes.DATEONLY,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     time: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     }
   });
 
@@ -50,13 +71,13 @@ const bet = (sequelize, DataTypes) => {
     Bet.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
 
-  Bet.findByNames = async (race_name, horse_name) => {
+  Bet.findById = async (id) => {
     let bet = await Bet.findOne({
-      where: { race_name, horse_name },
+      where: { id },
     });
 
     if (!bet) {
-      return 'Error: Could not find bet by names';
+      return 'Error: Could not find bet by id';
     }
 
     return bet;

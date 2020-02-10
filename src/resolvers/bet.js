@@ -55,6 +55,7 @@ export default {
     updateBet: async (
       parent,
       { 
+        id,
         race_name,
         horse_name,
         type,
@@ -67,7 +68,7 @@ export default {
       },
       { models },
     ) => {
-      const bet = await models.Bet.findByNames(race_name, horse_name);
+      const bet = await models.Bet.findById(id);
       return await bet.update({
         race_name,
         horse_name,
