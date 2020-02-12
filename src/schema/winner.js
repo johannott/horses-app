@@ -4,7 +4,7 @@ export default gql`
   extend type Query {
     winners: [Winner!]
     winner(id: ID!): Winner!
-    winnersByRace(horse_name: [String!]): [Winner!]
+    winnersByRace(race_name: String!): [Winner!]
   }
 
   extend type Mutation {
