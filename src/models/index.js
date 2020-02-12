@@ -22,6 +22,7 @@ const models = {
   Race: sequelize.import('./race'),
   Entry: sequelize.import('./entry'),
   Trend: sequelize.import('./trend'),
+  Winner: sequelize.import('./winner'),
   Account: sequelize.import('./account'),
   Bet: sequelize.import('./bet'),
   Track: sequelize.import('./track'),

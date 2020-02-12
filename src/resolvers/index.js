@@ -5,6 +5,7 @@ import horseResolvers from './horse';
 import raceResolvers from './race';
 import entryResolvers from './entry';
 import trendResolvers from './trend';
+import winnerResolvers from './winner';
 import accountResolvers from './account';
 import betResolvers from './bet';
 import trackResolvers from './track';
@@ -22,6 +23,7 @@ export default [
   raceResolvers,
   entryResolvers,
   trendResolvers,
+  winnerResolvers,
   accountResolvers,
   betResolvers,
   trackResolvers,
