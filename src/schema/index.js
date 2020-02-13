@@ -10,6 +10,7 @@ import accountSchema from './account';
 import betSchema from './bet';
 import trackSchema from './track';
 import noteSchema from './note';
+import abbreviationSchema from './abbreviation';
 import messageSchema from './message';
 
 const linkSchema = gql`
@@ -40,5 +41,6 @@ export default [
   betSchema,
   trackSchema,
   noteSchema,
+  abbreviationSchema,
   messageSchema
 ];

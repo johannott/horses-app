@@ -27,6 +27,7 @@ const models = {
   Bet: sequelize.import('./bet'),
   Track: sequelize.import('./track'),
   Note: sequelize.import('./note'),
+  Abbreviation: sequelize.import('./abbreviation'),
   Message: sequelize.import('./message'),
 };
 

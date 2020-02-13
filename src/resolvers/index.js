@@ -10,6 +10,7 @@ import accountResolvers from './account';
 import betResolvers from './bet';
 import trackResolvers from './track';
 import noteResolvers from './note';
+import abbreviationResolvers from './abbreviation';
 import messageResolvers from './message';
 
 const customScalarResolver = {
@@ -28,5 +29,6 @@ export default [
   betResolvers,
   trackResolvers,
   noteResolvers,
+  abbreviationResolvers,
   messageResolvers,
 ];
