@@ -65,6 +65,7 @@ export default {
     updateTrack: async (
       parent,
       { 
+        id,
         track_name,
         direction,
         topography,
@@ -75,8 +76,8 @@ export default {
       },
       { models },
     ) => {
-      const track = await models.Track.findByName(track_name);
-      return await account.update({
+      const track = await models.Track.findById(id);
+      return await track.update({
         track_name,
         direction,
         topography,

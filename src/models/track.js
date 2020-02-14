@@ -39,13 +39,13 @@ const track = (sequelize, DataTypes) => {
     Track.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
 
-  Track.findByName = async (track_name) => {
+  Track.findById = async (id) => {
     let track = await Track.findOne({
-      where: { track_name },
+      where: { id },
     });
 
     if (!track) {
-      return 'Error: Could not find track by name';
+      return 'Error: Could not find track by id';
     }
 
     return track;

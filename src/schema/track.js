@@ -22,6 +22,7 @@ export default gql`
     ): Track!
 
     updateTrack(
+      id: ID!
       track_name: String!
       direction: String
       topography: String
