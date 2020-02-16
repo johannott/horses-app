@@ -48,7 +48,7 @@ export default {
     updateRace: async (
       parent,
       { 
-        current_race,
+        id,
         race_name,
         race_fullname,
         type,
@@ -59,7 +59,7 @@ export default {
       },
       { models },
     ) => {
-      const race = await models.Race.findByName(current_race);
+      const race = await models.Race.findById(id);
       return await race.update({
         race_name,
         race_fullname,

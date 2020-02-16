@@ -19,7 +19,7 @@ export default gql`
     ): Race!
 
     updateRace(
-      current_name: String!
+      id: ID!
       race_name: String
       race_fullname: String
       type: String

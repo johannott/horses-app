@@ -55,9 +55,9 @@ const race = (sequelize, DataTypes) => {
     Race.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
 
-  Race.findByName = async race_name => {
+  Race.findById = async id => {
     let race = await Race.findOne({
-      where: { race_name },
+      where: { id },
     });
 
     if (!race) {
