@@ -42,8 +42,22 @@ const race = (sequelize, DataTypes) => {
         notEmpty: true
       },
     },
+    country: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      },
+    },
     age_limit: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      },
+    },
+    attended: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
       validate: {
         notEmpty: true

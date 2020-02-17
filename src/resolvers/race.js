@@ -17,6 +17,13 @@ export default {
         }
       });
     },
+    racesByCountry: async (parent, { country }, { models }) => {
+      return await models.Race.findAll({
+        where: {
+          country,
+        }
+      });
+    },
   },
 
   Mutation: {
@@ -29,7 +36,9 @@ export default {
         grade,
         distance,
         course,
-        age_limit
+        country,
+        age_limit,
+        attended
       },
       { models },
     ) => {
@@ -40,7 +49,9 @@ export default {
         grade,
         distance,
         course,
-        age_limit
+        country,
+        age_limit,
+        attended
       });
 
       return { race_name };
@@ -55,7 +66,9 @@ export default {
         grade,
         distance,
         course,
-        age_limit
+        country,
+        age_limit,
+        attended
       },
       { models },
     ) => {
@@ -67,7 +80,9 @@ export default {
         grade,
         distance,
         course,
-        age_limit
+        country,
+        age_limit,
+        attended
       });
     },
   }

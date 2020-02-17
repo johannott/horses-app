@@ -5,6 +5,7 @@ export default gql`
     races: [Race!]
     race(id: ID!): Race
     raceByName(race_name: String!): Race!
+    racesByCountry(country: String!): [Race!]
   }
 
   extend type Mutation {
@@ -15,7 +16,9 @@ export default gql`
       grade: String
       distance: String!
       course: String!
+      country: String!
       age_limit: String!
+      attended: String!
     ): Race!
 
     updateRace(
@@ -26,7 +29,9 @@ export default gql`
       grade: String
       distance: String
       course: String
+      country: String
       age_limit: String
+      attended: String
     ): Race!
   }
 
@@ -38,6 +43,8 @@ export default gql`
     grade: String
     distance: String!
     course: String!
+    country: String!
     age_limit: String!
+    attended: String!
   }
 `;
