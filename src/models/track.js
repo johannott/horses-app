@@ -32,6 +32,10 @@ const track = (sequelize, DataTypes) => {
     country: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   });
 

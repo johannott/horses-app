@@ -46,7 +46,8 @@ export default {
         notes,
         length,
         surface,
-        country
+        country,
+        url
       },
       { models },
     ) => {
@@ -57,7 +58,8 @@ export default {
         notes,
         length,
         surface,
-        country
+        country,
+        url
       });
 
       return { track_name };
@@ -72,7 +74,8 @@ export default {
         notes,
         length,
         surface,
-        country
+        country,
+        url
       },
       { models },
     ) => {
@@ -84,7 +87,8 @@ export default {
         notes,
         length,
         surface,
-        country
+        country,
+        url
       });
     },
   }
