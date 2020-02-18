@@ -12,7 +12,8 @@ export default {
       return await models.Winner.findAll({
         where: {
           race_name
-        }
+        },
+        order: [['year', 'DESC']]
       });
     }
   },
