@@ -1,7 +1,9 @@
 export default {
   Query: {
     horses: async (parent, args, { models }) => {
-      return await models.Horse.findAll();
+      return await models.Horse.findAll({
+        order: [['horse_name', 'ASC']],
+      });
     },
     horse: async (parent, { id }, { models }) => {
       return await models.Horse.findById(id);

@@ -1,7 +1,9 @@
 export default {
   Query: {
     notes: async (parent, args, { models }) => {
-      return await models.Note.findAll();
+      return await models.Note.findAll({
+        order: [['updatedAt', 'DESC']]
+      });
     },
     note: async (parent, { id }, { models }) => {
       return await models.Note.findById(id);

@@ -1,7 +1,9 @@
 export default {
   Query: {
     winners: async (parent, args, { models }) => {
-      return await models.Winner.findAll();
+      return await models.Winner.findAll({
+        order: [['year', 'DESC']]
+      });
     },
     winner: async (parent, { id }, { models }) => {
       return await models.Winner.findById(id);

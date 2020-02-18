@@ -1,7 +1,9 @@
 export default {
   Query: {
     accounts: async (parent, args, { models }) => {
-      return await models.Account.findAll();
+      return await models.Account.findAll({
+        order: [['account_name', 'ASC']],
+      });
     },
     account: async (parent, { id }, { models }) => {
       return await models.Account.findById(id);

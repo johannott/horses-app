@@ -1,7 +1,9 @@
 export default {
   Query: {
     tracks: async (parent, args, { models }) => {
-      return await models.Track.findAll();
+      return await models.Track.findAll({
+        order: [['track_name', 'ASC']]
+      });
     },
     track: async (parent, { id }, { models }) => {
       return await models.Track.findById(id);
