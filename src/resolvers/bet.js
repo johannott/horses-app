@@ -16,7 +16,7 @@ export default {
     betsByHorse: async (parent, { horse_name }, { models }) => {
       return await models.Bet.findAll({
         where: {
-          horse_name: { $contains: horse_name}
+          horse_name: { $contains: [horse_name]}
         }
       });
     },
