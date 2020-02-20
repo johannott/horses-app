@@ -10,7 +10,10 @@ export default {
       return await models.Trend.findAll({
         where: {
           race_name,
-        }
+        },
+        order: [
+          ['id', 'ASC'],
+        ]
       });
     },
   },
