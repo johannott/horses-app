@@ -9,13 +9,16 @@ export default gql`
 
   extend type Mutation {
     addTrend(
-      race_name: String
-      trend_: String
+      race_name: String!
+      trend_: String!
+      sentiment: String!
     ): Trend!
 
     updateTrend(
+      id: ID!
       race_name: String
       trend_: String
+      sentiment: String
     ): Trend!
   }
 
@@ -23,5 +26,6 @@ export default gql`
     id: ID!
     race_name: String
     trend_: String
+    sentiment: String
   }
 `;
