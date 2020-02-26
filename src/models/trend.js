@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 
 const trend = (sequelize, DataTypes) => {
   const Trend = sequelize.define('trend', {
-  race_name: {
+    race_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -10,6 +10,13 @@ const trend = (sequelize, DataTypes) => {
       },
     },
     trend_: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      },
+    },
+    sentiment: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

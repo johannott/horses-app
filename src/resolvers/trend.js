@@ -23,13 +23,15 @@ export default {
       parent,
       { 
         race_name,
-        trend_
+        trend_,
+        sentiment
       },
       { models },
     ) => {
       const trend = await models.Trend.create({
         race_name,
-        trend_
+        trend_,
+        sentiment
       });
 
       return { trend_ };
@@ -39,14 +41,16 @@ export default {
       { 
        id,
        race_name,
-       trend_
+       trend_,
+       sentiment
       },
       { models },
     ) => {
       const trend = await models.Trend.findById(id);
       return await trend.update({
         race_name,
-        trend_
+        trend_,
+        sentiment
       });
     },
   }
