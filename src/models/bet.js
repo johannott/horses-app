@@ -23,6 +23,13 @@ const bet = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    account_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
     places: {
       type: DataTypes.STRING,
       allowNull: false,

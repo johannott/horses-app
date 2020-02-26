@@ -6,6 +6,7 @@ export default gql`
     bet(id: ID!): Bet
     betsByRace(race_name: String!): [Bet!]
     betsByHorse(horse_name: String!): [Bet!]
+    betsByAccount(account_name: String!): [Bet!]
   }
 
   extend type Mutation {
@@ -13,6 +14,7 @@ export default gql`
       race_name: String!
       horse_name: [String!]
       type: String!
+      account_name: String!
       places: String!
       price: String!
       amount: String!
@@ -26,6 +28,7 @@ export default gql`
       race_name: String!
       horse_name: [String!]
       type: String!
+      account_name: String!
       places: String!
       price: String!
       amount: String!
@@ -40,6 +43,7 @@ export default gql`
     race_name: String!
     horse_name: [String!]
     type: String!
+    account_name: String!
     places: String!
     price: String!
     amount: String!

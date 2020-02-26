@@ -20,6 +20,13 @@ export default {
         }
       });
     },
+    betsByAccount: async (parent, { account_name }, { models }) => {
+      return await models.Bet.findAll({
+        where: {
+          account_name
+        }
+      });
+    },
   },
 
   Mutation: {
@@ -29,6 +36,7 @@ export default {
         race_name,
         horse_name,
         type,
+        account_name,
         places,
         price,
         amount,
@@ -42,6 +50,7 @@ export default {
         race_name,
         horse_name,
         type,
+        account_name,
         places,
         price,
         amount,
@@ -59,6 +68,7 @@ export default {
         race_name,
         horse_name,
         type,
+        account_name,
         places,
         price,
         amount,
@@ -73,6 +83,7 @@ export default {
         race_name,
         horse_name,
         type,
+        account_name,
         places,
         price,
         amount,
