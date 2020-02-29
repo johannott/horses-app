@@ -8,7 +8,7 @@ export default {
     track: async (parent, { id }, { models }) => {
       return await models.Track.findById(id);
     },
-    trackByName: async (parent, { account_name }, { models }) => {
+    trackByName: async (parent, { track_name }, { models }) => {
       return await models.Track.findOne({
         where: {
           track_name,
@@ -49,6 +49,7 @@ export default {
         length,
         surface,
         country,
+        current_going,
         url
       },
       { models },
@@ -61,6 +62,7 @@ export default {
         length,
         surface,
         country,
+        current_going,
         url
       });
 
@@ -77,6 +79,7 @@ export default {
         length,
         surface,
         country,
+        current_going,
         url
       },
       { models },
@@ -90,6 +93,7 @@ export default {
         length,
         surface,
         country,
+        current_going,
         url
       });
     },

@@ -33,6 +33,10 @@ const track = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    current_going: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     url: {
       type: DataTypes.STRING,
       allowNull: true,

@@ -19,6 +19,7 @@ export default gql`
       length: String
       surface: String
       country: String
+      current_going: String
       url: String
     ): Track!
 
@@ -31,6 +32,7 @@ export default gql`
       length: String
       surface: String
       country: String
+      current_going: String
       url: String
     ): Track!
   }
@@ -44,6 +46,7 @@ export default gql`
     length: String
     surface: String
     country: String
+    current_going: String
     url: String
   }
 `;
